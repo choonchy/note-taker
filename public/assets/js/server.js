@@ -3,6 +3,7 @@ const path = require('path');
 const db = require('../../../db/db.json');
 const fs = require('fs');
 const shortid = require('shortid');
+var appPORT = process.env.PORT || 3001;
 
 const app = express();
 
@@ -26,4 +27,4 @@ app.post('/api/notes', (req, res) => {
     });
 });
 
-app.listen(process.env.PORT || 3001, () => console.log(`App listening on PORT ${PORT}`));
+app.listen(appPORT, () => console.log(`App listening on PORT ${appPORT}`));
